@@ -1,0 +1,7 @@
+/venv
+/.vscode
+/.env
+/chatbot_db.sql
+/x.py
+/y.py
+/chatbot.log

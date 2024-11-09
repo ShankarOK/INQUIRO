@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science and Design - Innovating the Future</title>
+    <meta name="description"
+        content="Explore our cutting-edge B.E. in Computer Science and Engineering program at the Department of Computer Science and Engineering. Join us in shaping the future of technology.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body class="light-mode">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <img src="static/logo2.png" alt="CSD Logo" width="50" height="50" class="d-inline-block align-top">
+                    <span>CSD Department</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faculty">Faculty</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <button id="theme-toggle" class="btn btn-outline-primary ms-3">
+                        <i class="fas fa-moon"></i>
+                        <span class="ms-2">Dark Mode</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content animate__animated animate__fadeIn">
+                            <h1 class="hero-title">Welcome to our Department</h1>
+                            <p class="hero-subtitle">Explore our B.E. in Computer Science and Design program</p>
+                            <a href="#programs" class="btn btn-primary btn-lg me-3">Explore Program</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Computer Science and Engineering"
+                            class="img-fluid rounded shadow-lg animate__animated animate__fadeInRight">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title animate__animated animate__fadeInUp">About Our Department</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 animate__animated animate__fadeInLeft">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Modern Computer Lab" class="img-fluid rounded shadow-lg">
+                    </div>
+                    <div class="col-md-6 animate__animated animate__fadeInRight">
+                        <p class="lead">The Department of Computer Science and Design is a hub of innovation, where
+                            cutting-edge technology meets creative problem-solving. Our interdisciplinary approach
+                            prepares students to tackle the complex challenges of tomorrow's digital landscape.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-microchip"></i> State-of-the-art facilities and labs</li>
+                            <li><i class="fas fa-users"></i> Industry-experienced faculty</li>
+                            <li><i class="fas fa-flask"></i> Collaborative research opportunities</li>
+                            <li><i class="fas fa-handshake"></i> Strong industry partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title animate__animated animate__fadeInUp">Our Programs</h2>
+                <div class="row" id="programs-list">
+                    <div class="col-md-4 mb-4">
+                        <div class="card program-card">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top" alt="B.E. in Computer Science and Design">
+                            <div class="card-body">
+                                <h5 class="card-title">B.E. in Computer Science and Design</h5>
+                                <p class="card-text">Our flagship program combining computer science with design
+                                    principles.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card program-card">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top" alt="M.Tech in Artificial Intelligence">
+                            <div class="card-body">
+                                <h5 class="card-title">M.Tech in Artificial Intelligence</h5>
+                                <p class="card-text">Advanced program focusing on AI and machine learning technologies.
+                                </p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card program-card">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top" alt="Ph.D. in Computer Science">
+                            <div class="card-body">
+                                <h5 class="card-title">Ph.D. in Computer Science</h5>
+                                <p class="card-text">Research-oriented program for advancing the field of computer
+                                    science.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="section">
+            <div class="container">
+                <h2 class="section-title animate__animated animate__fadeInUp">Upcoming Events</h2>
+                <div id="events-list" class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Annual Tech Symposium</h5>
+                                <p class="card-text">Join us for a day of cutting-edge tech talks and networking.</p>
+                                <p class="card-text"><small class="text-muted">Date: August 15, 2024</small></p>
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card">
+                            <div class="card-body">
+                                <h5 class="card-title">AI Workshop Series</h5>
+                                <p class="card-text">Learn about the latest advancements in AI through hands-on
+                                    workshops.</p>
+                                <p class="card-text"><small class="text-muted">Date: September 5-7, 2024</small></p>
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card event-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Design Thinking Seminar</h5>
+                                <p class="card-text">Explore the intersection of design and technology in this seminar.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Date: October 20, 2024</small></p>
+                                <a href="#" class="btn btn-primary">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faculty" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title animate__animated animate__fadeInUp">Our Faculty</h2>
+                <div id="faculty-list" class="row justify-content-center">
+                    <div class="col-md-3 mb-4">
+                        <div class="faculty-item">
+                            <img src="https://pestrust.edu.in/pesitm/documents/files/faculty/1699351036_b4e4c02a133944984e26.jpg"
+                                alt="Dr. Pramod" class="faculty-image">
+                            <h4>Dr. Pramod</h4>
+                            <p>Professor and Head of the Department, CSD</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="faculty-item">
+                            <img src="https://pestrust.edu.in/pesitm/documents/files/faculty/1699351181_b415e8fcf1793ef4eee8.jpg"
+                                alt="Mrs. Ayisa Khanum" class="faculty-image">
+                            <h4>Mrs. Ayisha Khanum</h4>
+                            <p>Assistant Professor of Computer Networks</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="faculty-item">
+                            <img src="static\img\manju.jpeg" alt="Mr. Manjunath G" class="faculty-image">
+                            <h4>Mr. Manjunath G</h4>
+                            <p>Assistant Professor of Artificial Intelligence</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="faculty-item">
+                            <img src="static\img\kavya.jpeg" alt="Mrs. Kavya S" class="faculty-image">
+                            <h4>Mrs. Kavya S</h4>
+                            <p>Assistant Professor of Theory of Computation</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="faculty-item">
+                            <img src="static\img\harish.jpeg" alt="Mr. Harish" class="faculty-image">
+                            <h4>Mr. Harish</h4>
+                            <p>Assistant Professor of RM & IPR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title animate__animated animate__fadeInUp">Get in Touch</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 animate__animated animate__fadeInLeft">
+                        <form id="contact-form" class="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 animate__animated animate__fadeInRight">
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> PES Campus
+                                NH-206, Sagar Road
+                                Shivamogga - 577204</p>
+                            <p><i class="fas fa-phone"></i> +91 9886890174 </p>
+                            <p><i class="fas fa-envelope"></i> hodcsd@pestrust.edu.in </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="chatbot-container" class="chatbot-container">
+        <div id="chatbot-header" class="chatbot-header">
+            <h3>INQUIRO</h3>
+            <button id="chatbot-toggle" class="chatbot-toggle">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <form id="chatbot-form" class="chatbot-form">
+            <input type="text" id="user-input" class="chatbot-input" placeholder="Type your message...">
+            <button type="submit" class="chatbot-submit">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#programs">Academic Programs</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Newsletter</h4>
+                    <a href="#" class="btn btn-primary" id="newsletter-download">Download Newsletter</a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Department of Computer Science and Design. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

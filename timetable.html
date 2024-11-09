@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Stylish Timetable</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333; /* Dark text color */
+        }
+
+        .timetable-container {
+            width: 900px; /* Adjusted width */
+            height: 900px; /* Fixed height to make it square */
+            background: #ffffff; /* White background for container */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 30px;
+            position: relative; /* For logo positioning */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e94560; /* Keeping header color */
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #555; /* Darker grey for subheader */
+        }
+
+        .class-teacher {
+            text-align: center;
+            font-size: 16px;
+            color: #333; /* Dark text for teacher name */
+            margin-bottom: 20px;
+        }
+
+        .timetable {
+            background-color: #f4f4f4; /* Light grey background for timetable */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            height: auto; /* Changed to auto to fit content */
+        }
+
+        .course-details {
+            background-color: #e9ecef; /* Light grey for course details */
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            height: auto; /* Changed to auto to fit content */
+        }
+
+        .logo-left,
+        .logo-right {
+            position: absolute;
+            top: 20px;
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .logo-left {
+            left: 20px;
+        }
+
+        .logo-right {
+            right: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* For inner borders */
+        }
+
+        th,
+        td {
+            padding: 10px 5px; /* Reduced padding for course table */
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid #ccc; /* Grey border for tables */
+        }
+
+        th {
+            background-color: #278ea5; /* Blue header */
+            color: #ffffff; /* White text for header */
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Added styles for break and lunch headers */
+        .break-header,
+        .lunch-header {
+            background-color: #278ea5; /* Match the other headers */
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        td {
+            background-color: #ffffff; /* White for table cells */
+            color: #333; /* Dark text for cells */
+            font-weight: 500;
+        }
+
+        .day {
+            background-color: #278ea5; /* Day column background */
+            color: #ffffff; /* White text for days */
+            font-weight: 600;
+        }
+
+        .br {
+            background-color: #f8f9fa; /* Light grey for break cells */
+            color: #333; /* Dark text */
+            font-weight: 600;
+        }
+
+        .course-table {
+            width: 100%;
+            border-collapse: collapse; /* For inner borders */
+        }
+
+        .course-table th,
+        .course-table td {
+            padding: 5px; /* Reduced padding for course table cells */
+            border: 1px solid #ccc; /* Grey border for course table */
+        }
+
+        .course-table th {
+            background-color: #278ea5; /* Keeping the same header color */
+            color: #ffffff; /* White text for header */
+        }
+
+        @media (max-width: 900px) {
+            .timetable-container {
+                width: 100%;
+                border-radius: 0;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header p,
+            .class-teacher {
+                font-size: 12px;
+            }
+
+            th,
+            td {
+                padding: 10px 5px;
+                font-size: 12px;
+            }
+        }
+    </style>
+    <script>
+        // Function to go back to the previous page after 5 seconds
+        function goBackToChatbot() {
+            setTimeout(function() {
+                window.history.back(); // Go back to the previous page (chatbot)
+            }, 7000); // 7000 milliseconds = thala seconds
+        }
+
+        // Call the function when the page loads
+        window.onload = goBackToChatbot;
+    </script>
+</head>
+
+<body>
+    <div class="timetable-container">
+        <img src="static/logo1.png" alt="Logo 1" class="logo-left">
+        <img src="static/logo2.png" alt="Logo 2" class="logo-right">
+        <div class="header">
+            <h1>PES INSTITUTE OF TECHNOLOGY & MANAGEMENT</h1>
+            <p>Department of Computer Science and Design | 5th Semester | Section: CSD</p>
+        </div>
+        <div class="class-teacher">
+            Class Teacher: Mrs. Kavya S
+        </div>
+        <div class="timetable">
+            <table class="timetable-table">
+                <tr>
+                    <th>Day/Time</th>
+                    <th>8:00AM</th>
+                    <th>9:00AM</th>
+                    <th class="break-header">Break</th>
+                    <th>10:30AM</th>
+                    <th>11:30AM</th>
+                    <th class="lunch-header">Lunch</th>
+                    <th>1:30PM</th>
+                    <th>2:30PM</th>
+                </tr>
+                <tr>
+                    <td class="day">MON</td>
+                    <td>AI</td>
+                    <td>SE</td>
+                    <td rowspan="6" class="br">B R E A K</td>
+                    <td>CN</td>
+                    <td>TC</td>
+                    <td rowspan="6" class="br">L U N C H</td>
+                    <td colspan="2">Mini Project (A1)</td>
+                </tr>
+                <tr>
+                    <td class="day">TUE</td>
+                    <td>TC</td>
+                    <td>AI</td>
+                    <td>EVS</td>
+                    <td>CN</td>
+                    <td colspan="2">Forum ACTIVITY</td>
+                </tr>
+                <tr>
+                    <td class="day">WED</td>
+                    <td>CN</td>
+                    <td>TC</td>
+                    <td colspan="2">CN(A1)/OOD(A2)</td>
+                    <td colspan="2">YOGA</td>
+                </tr>
+                <tr>
+                    <td class="day">THU</td>
+                    <td>SE</td>
+                    <td>RM</td>
+                    <td colspan="2">CN(A2)/OOD(A1)</td>
+                    <td colspan="2">Mini Project (A2)</td>
+                </tr>
+                <tr>
+                    <td class="day">FRI</td>
+                    <td>RM</td>
+                    <td>TC</td>
+                    <td>SE</td>
+                    <td>RM</td>
+                    <td colspan="2">LIBRARY HOUR</td>
+                </tr>
+                <tr>
+                    <td class="day">SAT</td>
+                    <td>TC</td>
+                    <td>RM</td>
+                    <td>AI</td>
+                    <td>SE</td>
+                    <td colspan="2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="course-details">
+            <table class="course-table">
+                <tr>
+                    <th>Course code</th>
+                    <th>Course name</th>
+                    <th>Course instructor</th>
+                </tr>
+                <tr>
+                    <td>BCS501</td>
+                    <td>Software Engineering and Project Management</td>
+                    <td>Ms. Divya R</td>
+                </tr>
+                <tr>
+                    <td>BCS502</td>
+                    <td>Computer Networks</td>
+                    <td>Mrs. Ayisha Khanum</td>
+                </tr>
+                <tr>
+                    <td>BCS503</td>
+                    <td>Theory of Computation</td>
+                    <td>Mrs. Kavya S</td>
+                </tr>
+                <tr>
+                    <td>BCGL504</td>
+                    <td>OO Design Pattern Lab</td>
+                    <td>Mrs. Kavya S</td>
+                </tr>
+                <tr>
+                    <td>BCG515B</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Mr. Manjunath G</td>
+                </tr>
+                <tr>
+                    <td>BCG586</td>
+                    <td>Mini Project</td>
+                    <td>Dr. Pramod/ Mrs. Ayisha Khanum</td>
+                </tr>
+                <tr>
+                    <td>BRMK557</td>
+                    <td>Research Methodology and IPR</td>
+                    <td>Mr. Harish M</td>
+                </tr>
+                <tr>
+                    <td>BCS508</td>
+                    <td>EVS AND E-waste Management</td>
+                    <td>Mr. Rakesh MK</td>
+                </tr>
+                <tr>
+                    <td>BYOK559</td>
+                    <td>Yoga</td>
+                    <td>Dr. Sendhil</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
